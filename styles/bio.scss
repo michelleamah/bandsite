@@ -1,0 +1,74 @@
+@use "./partials/_fonts.scss" as *;
+@use "./partials/_variables.scss" as *;
+
+.body {
+    font-family: 'avenir-regular';
+}
+
+.nav-bar {
+    background-color: $primary-color-black;
+    color: $primary-color-white;
+    font-family: 'avenir-regular';
+
+    .nav-bar__logo--title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .nav-bar__image {
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+            margin-top: 1rem;
+        }
+    }
+
+    .nav-bar__list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: relative;
+    top: 0.5rem;
+    padding: 0;
+    margin: 0.3rem 0;
+    list-style-type: none;
+    padding-bottom: 1rem;
+    }
+}
+
+
+.bandheader {
+    background-image: url('/assets/images/hero-bio.jpg');
+    background-size: cover; 
+    padding: 5rem;
+    .bandheader__title {
+        font-family: 'avenir-regular';
+        font-size: 2rem;
+        color: $primary-color-white;
+    }
+}
+    
+    .about {
+        font-family: 'avenir-regular';
+        .about__subtitle {
+            font-size: 1.2rem;
+            color: $primary-color-black;
+        }
+    }
+    
+    .photos {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            max-width: 100%;
+            height: auto;
+            padding: 1rem;
+        }
+    }
+
+    .footer {
+        background-color: $primary-color-black;
+        font-family: 'avenir-regular';
+        
+    }

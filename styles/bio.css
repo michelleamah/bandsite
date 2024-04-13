@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "avenir-regular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: "avenir-demi";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+}
+@font-face {
+  font-family: "avenir-bold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+}
+.body {
+  font-family: "avenir-regular";
+}
+
+.nav-bar {
+  background-color: #323232;
+  color: #FFFFFF;
+  font-family: "avenir-regular";
+}
+.nav-bar .nav-bar__logo--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar .nav-bar__logo--title .nav-bar__image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-top: 1rem;
+}
+.nav-bar .nav-bar__list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+  position: relative;
+  top: 0.5rem;
+  padding: 0;
+  margin: 0.3rem 0;
+  list-style-type: none;
+  padding-bottom: 1rem;
+}
+
+.bandheader {
+  background-image: url("/assets/images/hero-bio.jpg");
+  background-size: cover;
+  padding: 5rem;
+}
+.bandheader .bandheader__title {
+  font-family: "avenir-regular";
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
+.about {
+  font-family: "avenir-regular";
+}
+.about .about__subtitle {
+  font-size: 1.2rem;
+  color: #323232;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.photos img {
+  max-width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #323232;
+  font-family: "avenir-regular";
+}/*# sourceMappingURL=bio.css.map */
