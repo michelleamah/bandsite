@@ -103,9 +103,6 @@ body {
   font-size: 1.8rem;
   color: #323232;
 }
-.about__quote {
-  font-family: "avenir-demi";
-}
 .about img {
   width: 100%;
 }
@@ -114,7 +111,6 @@ body {
 }
 .about__content--subtitle {
   font-size: 1.5rem;
-  font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
   .about__musicians {
@@ -185,25 +181,26 @@ body {
   color: #FFFFFF;
   padding-left: 1rem;
   font-size: 0.9rem;
+  position: relative;
 }
-.footer__contacts {
+.footer__sns--contacts {
   font-family: "avenir-demi";
   padding-top: 2rem;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-.footer__contacts--socials {
+.footer__sns--socials {
   padding-right: 2rem;
   padding-left: 0.3rem;
 }
-.footer__contacts--socials img {
+.footer__sns--socials img {
   height: 2rem;
 }
-.footer__management {
+.footer__ent--management {
   padding-bottom: 0.3rem;
   font-family: "avenir-demi";
 }
-.footer__email {
+.footer__ent--email {
   padding-top: 1rem;
 }
 .footer p {
@@ -221,10 +218,33 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer {
+    padding-left: 2rem;
+  }
+  .footer h3 {
+    margin: 0;
+    padding-right: 2.5rem;
+  }
+  .footer__sns {
     display: flex;
   }
-  .footer__management, .footer__email, .footer__info {
+  .footer__sns--socials {
+    padding-top: 2.7rem;
+  }
+  .footer__sns img {
+    height: 1.3rem;
+  }
+  .footer__section {
     display: flex;
-    flex-direction: row;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .footer__ent {
+    padding-right: 2rem;
+  }
+  .footer__copyright--logo {
+    position: absolute;
+    top: 0%;
+    left: 80%;
   }
 }/*# sourceMappingURL=bio.css.map */

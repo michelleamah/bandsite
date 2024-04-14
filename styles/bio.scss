@@ -99,10 +99,6 @@ body {
             font-size: 1.8rem;
             color: $primary-color-black;
             }
-
-        &__quote {
-            font-family: 'avenir-demi';
-        }
         img {
             width: 100%;
         }
@@ -112,7 +108,6 @@ body {
 
         &__content--subtitle {
             font-size: 1.5rem;
-            font-family: 'avenir-demi';
         }
         @include tablet {
             &__musicians {
@@ -176,34 +171,33 @@ body {
             }
         }
     }
-
     .footer {
         background-color: $primary-color-black;
         font-family: 'avenir-regular';
         color: $primary-color-white;
         padding-left: 1rem;
         font-size: 0.9rem;
-        &__contacts {
+        position: relative;
+        &__sns--contacts {
             font-family: 'avenir-demi';
             padding-top: 2rem;
             font-size: 2rem;
             margin-bottom: 1rem;
-            &--socials {
-                padding-right: 2rem;
-                padding-left: 0.3rem;
-                img {
-                    height: 2rem;
-                }
-            }
         }
-        &__management {
+        &__sns--socials {
+            padding-right: 2rem;
+            padding-left: 0.3rem;
+            img {
+            height: 2rem;
+        }
+        }
+        &__ent--management {
             padding-bottom: 0.3rem;
             font-family: 'avenir-demi';
         }
-        &__email {
+        &__ent--email {
             padding-top: 1rem;
         }
-
         p {
             margin: 0;
         }
@@ -220,13 +214,33 @@ body {
             }
         }
         @include tablet {
-            display: flex;
-            &__contacts {
+            padding-left: 2rem;
+            h3 {
+                margin: 0;
+                padding-right: 2.5rem;
             }
-            &__management, &__email, &__info {
+            &__sns {
                 display: flex;
-                flex-direction: row;
+                &--socials {
+                    padding-top: 2.7rem;
+                }
+                img {
+                    height: 1.3rem;
+                }
             }
-        }
-        
+            &__section {
+            display: flex;
+            position: relative;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            }
+            &__ent {
+                padding-right: 2rem;
+            }
+            &__copyright--logo {
+                position: absolute;
+                top: 0%;
+                left: 80%;
+            }
+    }
     }
