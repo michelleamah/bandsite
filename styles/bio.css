@@ -32,53 +32,49 @@ body {
 .nav-bar__list {
   display: flex;
   flex-direction: row;
-  position: relative;
-  align-items: flex-start;
+  width: 100vw;
   top: 0.5rem;
   padding: 0;
   margin: 0;
-  padding-bottom: 0.5rem;
   list-style-type: none;
+  justify-content: center;
 }
 .nav-bar__item {
   padding-bottom: 1rem;
-  padding-left: 15vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 .nav-bar__item--active {
-  width: 35vw;
-  border-bottom: 3px solid #FFFFFF;
   padding-bottom: 1rem;
-  padding-left: 15vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  border-bottom: 2px solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .nav-bar {
     display: flex;
-    flex-direction: row;
   }
   .nav-bar__logo--image {
     width: 100%;
     padding-left: 2rem;
-    padding-bottom: 2rem;
     padding-top: 1rem;
-    padding-right: 2rem;
+    padding-bottom: 0.5rem;
   }
   .nav-bar__list {
-    display: flex;
-    flex-direction: row;
-    position: relative;
     list-style-type: none;
     font-size: 1rem;
-    padding: 0;
-    padding-left: 3rem;
-    padding-bottom: 0.2rem;
+    justify-content: flex-start;
+    padding-left: 4rem;
   }
   .nav-bar__item {
-    padding-left: 4rem;
-    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
   }
   .nav-bar__item--active {
-    border-bottom: 0.14rem solid #FFFFFF;
-    padding-bottom: 1.5rem;
+    border-bottom: 3px solid #FFFFFF;
+    padding: 0;
+    padding-top: 2rem;
   }
 }
 
