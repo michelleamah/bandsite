@@ -23,6 +23,7 @@ body {
 .nav-bar__logo {
   display: flex;
   justify-content: center;
+  padding-bottom: 1rem;
 }
 .nav-bar__logo--image {
   width: 30%;
@@ -31,14 +32,23 @@ body {
 .nav-bar__list {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-around;
   position: relative;
+  align-items: flex-start;
   top: 0.5rem;
   padding: 0;
-  margin: 0.3rem 0;
+  margin: 0;
+  padding-bottom: 0.5rem;
   list-style-type: none;
+}
+.nav-bar__item {
   padding-bottom: 1rem;
+  padding-left: 15vw;
+}
+.nav-bar__item--active {
+  width: 35vw;
+  border-bottom: 3px solid #FFFFFF;
+  padding-bottom: 1rem;
+  padding-left: 15vw;
 }
 @media screen and (min-width: 768px) {
   .nav-bar {
@@ -118,11 +128,14 @@ body {
     padding-top: 1rem;
     padding-left: 2rem;
   }
-  .about__quote, .about img, .about__content {
+  .about__quote, .about__content, .about img {
     width: 70%;
-    display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  .about img {
+    display: flex;
+    justify-content: center;
   }
   .about__content--subtitle {
     font-size: 1.5rem;
