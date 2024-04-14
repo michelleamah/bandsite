@@ -19,12 +19,12 @@
   color: #FFFFFF;
   font-family: "avenir-regular";
 }
-.nav-bar .nav-bar__logo--title {
+.nav-bar__logo--title {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav-bar .nav-bar__logo--title .nav-bar__image {
+.nav-bar__logo--title .nav-bar__image {
   margin-left: auto;
   margin-right: auto;
   width: 20%;
@@ -48,23 +48,35 @@
   background-size: cover;
   padding: 5rem;
 }
-.bandheader .bandheader__title {
-  font-family: "avenir-regular";
+.bandheader__title {
+  font-family: "avenir-demi";
   font-size: 2rem;
   color: #FFFFFF;
 }
 
 .about {
-  font-family: "avenir-regular";
+  font-family: "avenir-demi";
 }
-.about .about__subtitle {
+.about__subtitle {
   font-size: 1.2rem;
   color: #323232;
+}
+.about__quote {
+  font-family: "avenir-demi";
+}
+.about img {
+  width: 100%;
+}
+.about__content--bio {
+  font-family: "avenir-regular";
 }
 
 .photos {
   display: flex;
   flex-wrap: wrap;
+}
+.photos__title {
+  font-family: "avenir-demi";
 }
 .photos img {
   max-width: 100%;
@@ -75,4 +87,31 @@
 .footer {
   background-color: #323232;
   font-family: "avenir-regular";
+  color: #FFFFFF;
+  padding-left: 1rem;
+}
+.footer__contacts {
+  font-family: "avenir-demi";
+  padding-top: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.footer__contacts--socials {
+  padding-right: 3rem;
+  padding-left: 0.3rem;
+}
+.footer__contacts--socials img {
+  height: 2rem;
+}
+.footer__management {
+  padding-bottom: 0.3rem;
+  font-family: "avenir-demi";
+}
+.footer__email {
+  padding: 0;
+  margin: 0;
+}
+.footer__info {
+  padding: 0;
+  margin: 0;
 }/*# sourceMappingURL=bio.css.map */

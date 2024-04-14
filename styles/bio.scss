@@ -10,7 +10,7 @@
     color: $primary-color-white;
     font-family: 'avenir-regular';
 
-    .nav-bar__logo--title {
+    &__logo--title {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -42,24 +42,37 @@
     background-image: url('/assets/images/hero-bio.jpg');
     background-size: cover; 
     padding: 5rem;
-    .bandheader__title {
-        font-family: 'avenir-regular';
+    &__title {
+        font-family: 'avenir-demi';
         font-size: 2rem;
         color: $primary-color-white;
     }
 }
     
     .about {
-        font-family: 'avenir-regular';
-        .about__subtitle {
+        font-family: 'avenir-demi';
+        &__subtitle {
             font-size: 1.2rem;
             color: $primary-color-black;
+        }
+
+        &__quote {
+            font-family: 'avenir-demi';
+        }
+        img {
+            width: 100%;
+        }
+        &__content--bio {
+            font-family: 'avenir-regular';
         }
     }
     
     .photos {
         display: flex;
         flex-wrap: wrap;
+        &__title {
+            font-family: 'avenir-demi';
+        }
         img {
             max-width: 100%;
             height: auto;
@@ -70,5 +83,33 @@
     .footer {
         background-color: $primary-color-black;
         font-family: 'avenir-regular';
+        color: $primary-color-white;
+        padding-left: 1rem;
+        &__contacts {
+            font-family: 'avenir-demi';
+            padding-top: 2rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            &--socials {
+                padding-right: 3rem;
+                padding-left: 0.3rem;
+                img {
+                    height: 2rem;
+                }
+            }
+        }
+        &__management {
+            padding-bottom: 0.3rem;
+            font-family: 'avenir-demi';
+        }
+        &__email {
+            padding: 0;
+            margin: 0;
+        }
+        &__info {
+            padding: 0;
+            margin: 0;
+
+        }
         
     }
