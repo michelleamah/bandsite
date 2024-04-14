@@ -10,8 +10,9 @@
   font-family: "avenir-bold";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
-.body {
+body {
   font-family: "avenir-regular";
+  margin: 0;
 }
 
 .nav-bar {
@@ -19,18 +20,15 @@
   color: #FFFFFF;
   font-family: "avenir-regular";
 }
-.nav-bar__logo--title {
+.nav-bar__logo {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.nav-bar__logo--title .nav-bar__image {
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
+.nav-bar__logo--image {
+  width: 30%;
   margin-top: 1rem;
 }
-.nav-bar .nav-bar__list {
+.nav-bar__list {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -42,23 +40,67 @@
   list-style-type: none;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-bar__logo--image {
+    width: 100%;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+  }
+  .nav-bar__list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    list-style-type: none;
+    font-size: 1rem;
+    padding: 0;
+    padding-left: 3rem;
+    padding-bottom: 0.2rem;
+  }
+  .nav-bar__item {
+    padding-left: 4rem;
+    padding-bottom: 1.5rem;
+  }
+  .nav-bar__item--active {
+    border-bottom: 0.14rem solid #FFFFFF;
+    padding-bottom: 1.5rem;
+  }
+}
 
 .bandheader {
   background-image: url("/assets/images/hero-bio.jpg");
   background-size: cover;
-  padding: 5rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-left: 1rem;
 }
 .bandheader__title {
   font-family: "avenir-demi";
   font-size: 2rem;
   color: #FFFFFF;
 }
-
+@media screen and (min-width: 768px) {
+  .bandheader {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    padding-left: 2rem;
+  }
+  .bandheader__title {
+    font-size: 3.5rem;
+  }
+}
 .about {
   font-family: "avenir-demi";
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
-.about__subtitle {
-  font-size: 1.2rem;
+.about__musicians {
+  font-size: 1.8rem;
   color: #323232;
 }
 .about__quote {
@@ -70,10 +112,43 @@
 .about__content--bio {
   font-family: "avenir-regular";
 }
+.about__content--subtitle {
+  font-size: 1.5rem;
+  font-family: "avenir-demi";
+}
+@media screen and (min-width: 768px) {
+  .about__musicians {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+  .about__quote, .about img, .about__content {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about__content--subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  .about__content--bio {
+    display: flex;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  .about__content--bio1 {
+    padding-right: 1rem;
+  }
+}
 
 .photos {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 .photos__title {
   font-family: "avenir-demi";
@@ -81,7 +156,27 @@
 .photos img {
   max-width: 100%;
   height: auto;
-  padding: 1rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .photos__title {
+    font-size: 2rem;
+  }
+  .photos img {
+    flex-wrap: wrap;
+    width: 30%;
+    padding-left: 1.3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photos {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .photos__title {
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
 }
 
 .footer {
@@ -89,15 +184,16 @@
   font-family: "avenir-regular";
   color: #FFFFFF;
   padding-left: 1rem;
+  font-size: 0.9rem;
 }
 .footer__contacts {
   font-family: "avenir-demi";
   padding-top: 2rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 .footer__contacts--socials {
-  padding-right: 3rem;
+  padding-right: 2rem;
   padding-left: 0.3rem;
 }
 .footer__contacts--socials img {
@@ -108,10 +204,27 @@
   font-family: "avenir-demi";
 }
 .footer__email {
-  padding: 0;
+  padding-top: 1rem;
+}
+.footer p {
   margin: 0;
 }
-.footer__info {
-  padding: 0;
+.footer__copyright--logo {
+  font-size: 2rem;
+  padding-top: 2rem;
   margin: 0;
+}
+.footer__copyright--more {
+  font-size: 0.8rem;
+  padding-bottom: 4rem;
+  padding-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+  }
+  .footer__management, .footer__email, .footer__info {
+    display: flex;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=bio.css.map */
