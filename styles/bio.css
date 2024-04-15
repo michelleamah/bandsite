@@ -26,28 +26,28 @@ body {
   padding-bottom: 1rem;
 }
 .nav-bar__logo--image {
-  width: 30%;
+  max-width: 120px;
   margin-top: 1rem;
+  max-height: 20px;
 }
 .nav-bar__list {
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  top: 0.5rem;
   padding: 0;
   margin: 0;
+  max-width: 100%;
   list-style-type: none;
   justify-content: center;
 }
 .nav-bar__item {
   padding-bottom: 1rem;
   padding-left: 20vw;
-  padding-right: 20vw;
+  padding-right: 25vw;
 }
 .nav-bar__item--active {
   padding-bottom: 1rem;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding-right: 18vw;
+  padding-left: 21vw;
   border-bottom: 2px solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
@@ -72,18 +72,33 @@ body {
     padding-top: 2rem;
   }
   .nav-bar__item--active {
-    border-bottom: 3px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
     padding: 0;
     padding-top: 2rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav-bar {
+    display: flex;
+  }
+  .nav-bar__logo--image {
+    width: 100%;
+    padding-left: 5rem;
+  }
+  .nav-bar__list {
+    list-style-type: none;
+    font-size: 0.8rem;
+  }
+}
 
 .bandheader {
-  background-image: url("/assets/images/hero-bio.jpg");
+  background: #323232;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/hero-bio.jpg");
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
   padding-left: 1rem;
+  opacity: 90%;
 }
 .bandheader__title {
   font-family: "avenir-demi";
@@ -100,6 +115,12 @@ body {
     font-size: 3.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .bandheader {
+    padding-bottom: 15rem;
+  }
+}
+
 .about {
   font-family: "avenir-demi";
   padding-left: 1.2rem;
@@ -111,6 +132,9 @@ body {
 }
 .about img {
   width: 100%;
+}
+.about__quote--author {
+  font-size: 0.9rem;
 }
 .about__content--bio {
   font-family: "avenir-regular";
@@ -128,6 +152,9 @@ body {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .about__quote--author {
+    font-size: 0.9rem;
   }
   .about img {
     display: flex;
@@ -227,7 +254,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    padding-left: 2rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
   }
   .footer h3 {
     margin: 0;
@@ -253,7 +281,14 @@ body {
   }
   .footer__copyright--logo {
     position: absolute;
-    top: 0%;
+    top: 7%;
+    left: 75%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright--logo {
+    position: absolute;
+    top: 5%;
     left: 80%;
   }
 }/*# sourceMappingURL=bio.css.map */

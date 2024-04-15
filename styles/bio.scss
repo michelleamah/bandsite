@@ -16,28 +16,28 @@ body {
         justify-content: center;
         padding-bottom: 1rem;
         &--image {
-            width: 30%;
+            max-width: 120px;
             margin-top: 1rem;
+            max-height: 20px;
         }
     }
     &__list {
     display: flex;
     flex-direction: row;
-    width: 100vw;
-    top: 0.5rem;
     padding: 0;
     margin: 0;
+    max-width: 100%;
     list-style-type: none;
     justify-content: center;
     }
     &__item {
         padding-bottom: 1rem;
         padding-left: 20vw;
-        padding-right: 20vw;
+        padding-right: 25vw;
         &--active {
             padding-bottom: 1rem;
-            padding-left: 20vw;
-            padding-right: 20vw;
+            padding-right: 18vw;
+            padding-left: 21vw;
             border-bottom: 2px solid $primary-color-white;
         }
     }
@@ -63,22 +63,39 @@ body {
                 padding-right: 2rem;
                 padding-top: 2rem;
                 &--active {
-                    border-bottom: 3px solid $primary-color-white;
+                    border-bottom: 2px solid $primary-color-white;
                     padding: 0;
                     padding-top: 2rem;
                 }
             }
 
         }
+    
+    @include desktop {
+        display: flex;
+            &__logo {
+                &--image {
+                    width: 100%;
+                    padding-left: 5rem;
+                }
 
-    }
+            }
+            &__list {
+                list-style-type: none;
+                font-size: 0.8rem;
+                        }
+                }
+        }
 
 .bandheader {
-    background-image: url('/assets/images/hero-bio.jpg');
+    background: $primary-color-black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url('/assets/images/hero-bio.jpg');
     background-size: cover; 
     padding-top: 8rem;
     padding-bottom: 8rem;
     padding-left: 1rem;
+    opacity: 90%;
     &__title {
         font-family: 'avenir-demi';
         font-size: 2rem;
@@ -93,7 +110,7 @@ body {
         }
     }
     @include desktop {
-
+        padding-bottom: 15rem;
     }
 }
     
@@ -108,6 +125,11 @@ body {
         img {
             width: 100%;
         }
+
+        &__quote--author {
+            font-size: 0.9rem;
+        }
+
         &__content--bio {
             font-family: 'avenir-regular';
         }
@@ -126,6 +148,10 @@ body {
                 width: 70%;
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            &__quote--author {
+                font-size: 0.9rem;
             }
 
             img {
@@ -224,7 +250,8 @@ body {
             }
         }
         @include tablet {
-            padding-left: 2rem;
+            padding-left: 4rem;
+            padding-top: 2rem;
             h3 {
                 margin: 0;
                 padding-right: 2.5rem;
@@ -249,8 +276,15 @@ body {
             }
             &__copyright--logo {
                 position: absolute;
-                top: 0%;
-                left: 80%;
+                top: 7%;
+                left: 75%;
             }
     }
+        @include desktop {
+            &__copyright--logo {
+                position: absolute;
+                top: 5%;
+                left: 80%;
+            }
+        }
     }
