@@ -138,6 +138,7 @@ body {
 }
 .about__content--bio {
   font-family: "avenir-regular";
+  padding-bottom: 2rem;
 }
 .about__content--subtitle {
   font-size: 1.5rem;
@@ -175,15 +176,27 @@ body {
     padding-right: 1rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__quote {
+    padding-top: 2.25rem;
+    font-size: 1.25rem;
+  }
+  .about__quote--author {
+    font-size: 1rem;
+  }
+}
 
 .photos {
   display: flex;
   flex-wrap: wrap;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
+  background-color: rgba(98, 91, 91, 0.03);
 }
 .photos__title {
   font-family: "avenir-demi";
+  padding-top: 1rem;
+  font-size: 2.5rem;
 }
 .photos img {
   max-width: 100%;
@@ -193,6 +206,8 @@ body {
 @media screen and (min-width: 768px) {
   .photos__title {
     font-size: 2rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
   }
   .photos img {
     flex-wrap: wrap;
@@ -208,6 +223,7 @@ body {
   .photos__title {
     padding-left: 1rem;
     font-size: 2rem;
+    padding-top: 1rem;
   }
 }
 
@@ -244,8 +260,10 @@ body {
 }
 .footer__copyright--logo {
   font-size: 2rem;
-  padding-top: 2rem;
   margin: 0;
+}
+.footer__copyright img {
+  padding-top: 3rem;
 }
 .footer__copyright--more {
   font-size: 0.8rem;
