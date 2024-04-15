@@ -16,9 +16,9 @@ body {
         justify-content: center;
         padding-bottom: 1rem;
         &--image {
-            max-width: 120px;
+            max-width: 7.5rem;
             margin-top: 1rem;
-            max-height: 20px;
+            max-height: 1.25rem;
         }
     }
     &__list {
@@ -38,7 +38,7 @@ body {
             padding-bottom: 1rem;
             padding-right: 18vw;
             padding-left: 21vw;
-            border-bottom: 2px solid $primary-color-white;
+            border-bottom: 0.125rem solid $primary-color-white;
         }
     }
 
@@ -63,7 +63,7 @@ body {
                 padding-right: 2rem;
                 padding-top: 2rem;
                 &--active {
-                    border-bottom: 2px solid $primary-color-white;
+                    border-bottom: 0.125rem solid $primary-color-white;
                     padding: 0;
                     padding-top: 2rem;
                 }

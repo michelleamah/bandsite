@@ -26,9 +26,9 @@ body {
   padding-bottom: 1rem;
 }
 .nav-bar__logo--image {
-  max-width: 120px;
+  max-width: 7.5rem;
   margin-top: 1rem;
-  max-height: 20px;
+  max-height: 1.25rem;
 }
 .nav-bar__list {
   display: flex;
@@ -48,7 +48,7 @@ body {
   padding-bottom: 1rem;
   padding-right: 18vw;
   padding-left: 21vw;
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 0.125rem solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .nav-bar {
@@ -72,7 +72,7 @@ body {
     padding-top: 2rem;
   }
   .nav-bar__item--active {
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 0.125rem solid #FFFFFF;
     padding: 0;
     padding-top: 2rem;
   }
