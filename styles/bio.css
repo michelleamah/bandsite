@@ -149,7 +149,8 @@ body {
     padding-top: 1rem;
     padding-left: 2rem;
   }
-  .about__quote, .about__content, .about img {
+  .about__quote, .about__content,
+  .about img {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
