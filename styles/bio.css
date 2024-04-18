@@ -91,6 +91,90 @@ body {
   }
 }
 
+.footer {
+  background-color: #323232;
+  font-family: "avenir-regular";
+  color: #FFFFFF;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  position: relative;
+}
+.footer__sns--contacts {
+  font-family: "avenir-demi";
+  padding-top: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.footer__sns--socials {
+  padding-right: 2rem;
+  padding-left: 0.3rem;
+}
+.footer__sns--socials img {
+  height: 2rem;
+}
+.footer__ent--management {
+  padding-bottom: 0.3rem;
+  font-family: "avenir-demi";
+}
+.footer__ent--email {
+  padding-top: 1rem;
+}
+.footer p {
+  margin: 0;
+}
+.footer__copyright--logo {
+  font-size: 2rem;
+  margin: 0;
+}
+.footer__copyright img {
+  padding-top: 3rem;
+}
+.footer__copyright--more {
+  font-size: 0.8rem;
+  padding-bottom: 4rem;
+  padding-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+  .footer h3 {
+    margin: 0;
+    padding-right: 2.5rem;
+  }
+  .footer__sns {
+    display: flex;
+  }
+  .footer__sns--socials {
+    padding-top: 2.7rem;
+  }
+  .footer__sns img {
+    height: 1.3rem;
+  }
+  .footer__section {
+    display: flex;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .footer__ent {
+    padding-right: 2rem;
+  }
+  .footer__copyright--logo {
+    position: absolute;
+    top: 7%;
+    left: 75%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright--logo {
+    position: absolute;
+    top: 5%;
+    left: 80%;
+  }
+}
+
 .bandheader {
   background: #323232;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/hero-bio.jpg");
@@ -225,89 +309,5 @@ body {
     padding-left: 1rem;
     font-size: 2rem;
     padding-top: 1rem;
-  }
-}
-
-.footer {
-  background-color: #323232;
-  font-family: "avenir-regular";
-  color: #FFFFFF;
-  padding-left: 1rem;
-  font-size: 0.9rem;
-  position: relative;
-}
-.footer__sns--contacts {
-  font-family: "avenir-demi";
-  padding-top: 2rem;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.footer__sns--socials {
-  padding-right: 2rem;
-  padding-left: 0.3rem;
-}
-.footer__sns--socials img {
-  height: 2rem;
-}
-.footer__ent--management {
-  padding-bottom: 0.3rem;
-  font-family: "avenir-demi";
-}
-.footer__ent--email {
-  padding-top: 1rem;
-}
-.footer p {
-  margin: 0;
-}
-.footer__copyright--logo {
-  font-size: 2rem;
-  margin: 0;
-}
-.footer__copyright img {
-  padding-top: 3rem;
-}
-.footer__copyright--more {
-  font-size: 0.8rem;
-  padding-bottom: 4rem;
-  padding-top: 0.5rem;
-}
-@media screen and (min-width: 768px) {
-  .footer {
-    padding-left: 4rem;
-    padding-top: 2rem;
-  }
-  .footer h3 {
-    margin: 0;
-    padding-right: 2.5rem;
-  }
-  .footer__sns {
-    display: flex;
-  }
-  .footer__sns--socials {
-    padding-top: 2.7rem;
-  }
-  .footer__sns img {
-    height: 1.3rem;
-  }
-  .footer__section {
-    display: flex;
-    position: relative;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  .footer__ent {
-    padding-right: 2rem;
-  }
-  .footer__copyright--logo {
-    position: absolute;
-    top: 7%;
-    left: 75%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__copyright--logo {
-    position: absolute;
-    top: 5%;
-    left: 80%;
   }
 }/*# sourceMappingURL=bio.css.map */
