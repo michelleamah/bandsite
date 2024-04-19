@@ -2,3 +2,32 @@
 @use "./partials/_variables.scss" as *;
 @use "./partials/_mixins.scss" as *;
 @use "./partials/_global.scss" as *;
+
+.bandheader {
+  background: $primary-color-black;
+  background-image: url("/assets/images/hero-shows.jpg");
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-left: 1rem;
+  opacity: 90%;
+  color: $primary-color-white;
+  &__title {
+    font-family: "avenir-demi";
+    font-size: 2rem;
+    color: $primary-color-white;
+  }
+
+  @include tablet {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    padding-left: 2rem;
+    &__title {
+      font-size: 3.5rem;
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 15rem;
+  }
+}

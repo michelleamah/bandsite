@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/bio.css" />
-    <script src="index-page.js" defer></script>
+    <script src="/scripts/index-page.js" defer></script>
     <title>Bandsite</title>
   </head>
   <body>
@@ -79,15 +79,15 @@
     </section>
     <section class="commentSection">
       <h2>Comments</h2>
-      <!-- <form id="commentForm">
+      <form class="commentForm">
         <label for="name">Name:</label>
-        <input type="text" id="name"/>
-        <label for="comment">Comment:</label> 
-        <textarea id="comment"></textarea>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <label for="commentText">Comment:</label>
+        <textarea id="commentText" name="commentText" placeholder="Add a new comment"></textarea>
         <button type="submit">Submit</button>
-      </form> -->
+      </form>
+      <div class="commentBox"></div>
     </section>
-
     <footer class="footer">
       <section class="footer__sns">
         <h3 class="footer__sns--contacts">Get in Touch</h3>

@@ -173,4 +173,35 @@ body {
     top: 5%;
     left: 80%;
   }
+}
+
+.bandheader {
+  background: #323232;
+  background-image: url("/assets/images/hero-shows.jpg");
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-left: 1rem;
+  opacity: 90%;
+  color: #FFFFFF;
+}
+.bandheader__title {
+  font-family: "avenir-demi";
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .bandheader {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    padding-left: 2rem;
+  }
+  .bandheader__title {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bandheader {
+    padding-bottom: 15rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
