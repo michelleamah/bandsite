@@ -1,4 +1,4 @@
-const dates = [
+const shows = [
   {
     date: "Mon Sept 09 2024",
     venue: "Ronald Lane",

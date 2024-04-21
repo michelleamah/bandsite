@@ -310,4 +310,55 @@ body {
     font-size: 2rem;
     padding-top: 1rem;
   }
+}
+
+.comments {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.comments__title {
+  font-size: 2.5rem;
+  font-family: "avenir-demi";
+}
+.comments__form {
+  font-family: "avenir-demi";
+  color: #AFAFAF;
+  display: flex;
+}
+.comments__form--avatar {
+  border-radius: 3rem;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
+.commentForm {
+  margin-top: 2rem;
+  width: 100%;
+}
+.commentForm input, .commentForm textarea {
+  font-family: "avenir-regular";
+  width: 100%;
+  margin-bottom: 1rem;
+  border-color: #AFAFAF;
+  border-width: 0.15rem;
+  border-radius: 0.2rem;
+  background-color: #FAFAFA;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+.commentForm button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #323232;
+  color: #FFFFFF;
+  font-family: "avenir-demi";
+  font-size: 1.2rem;
+  border: none;
+}
+.commentForm button:hover {
+  background-color: #AFAFAF;
 }/*# sourceMappingURL=bio.css.map */

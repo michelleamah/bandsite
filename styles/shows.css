@@ -177,11 +177,12 @@ body {
 
 .bandheader {
   background: #323232;
-  background-image: url("/assets/images/hero-shows.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/hero-shows.jpg");
   background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  padding-left: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   opacity: 90%;
   color: #FFFFFF;
 }
