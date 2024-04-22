@@ -4,26 +4,26 @@
 @use "./partials/_global.scss" as *;
 
 .bandheader {
-  background: $primary-color-black;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/assets/images/hero-shows.jpg");
   background-size: cover;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  padding-left: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-left: 1rem;
   padding-right: 2rem;
   opacity: 90%;
   color: $primary-color-white;
+
   &__title {
     font-family: "avenir-demi";
     font-size: 2rem;
-    color: $primary-color-white;
   }
 
   @include tablet {
     padding-top: 9rem;
     padding-bottom: 9rem;
     padding-left: 2rem;
+
     &__title {
       font-size: 3.5rem;
     }
@@ -31,5 +31,107 @@
 
   @include desktop {
     padding-bottom: 15rem;
+  }
+}
+
+.shows {
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-family: 'avenir-demi';
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.shows__list {
+  display: flex;
+}
+
+.shows__item {
+  padding: 1rem;
+  border-bottom: 1px solid $primary-color-silver;
+  padding-right: 1rem;
+
+  &__label {
+    color: $primary-color-silver;
+    font-family: 'avenir-demi';
+    font-size: 0.8rem;
+  }
+
+  &__button {
+    font-family: 'avenir-demi';
+    font-size: 1rem;
+    background-color: $primary-color-black;
+    color: $primary-color-white;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  &--selected {
+    background-color: $secondary-color-mercury;
+  }
+
+  &:hover {
+    background-color: $secondary-color-alabaster;
+  }
+
+  &__text {
+    padding-bottom: 1rem;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: row; 
+    &__label {
+      margin-right: 1rem; 
+    }
+
+    &__button {
+      width: auto;
+      margin-top: auto;
+      margin-left: auto;
+      margin-right: 2rem;
+    }
+    &__labels-container {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-end;
+      padding-left: 3rem;
+    }
+    &__text {
+      flex-direction: row;
+      width: 11rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row; 
+    &__label {
+      margin-right: 1rem; 
+    }
+    &__button {
+      width: auto;
+      margin-top: auto;
+      margin-left: auto;
+      margin-right: 2rem;
+    }
+    &__labels-container {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-end;
+      padding-left: 3rem;
+    }
+    &__text {
+      flex-direction: row;
+      width: 11rem;
+      padding-bottom: 1rem;
+    }
   }
 }

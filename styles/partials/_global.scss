@@ -41,6 +41,18 @@ body {
         border-bottom: 0.125rem solid $primary-color-white;
       }
     }
+
+    .active-link {
+      text-decoration: none;
+      color: $primary-color-white;
+      // &:hover {
+      //   padding-bottom: 1rem;
+      //   padding-right: 18vw;
+      //   padding-left: 21vw;
+      //   border-bottom: 0.125rem solid $primary-color-white;
+      // }
+
+    }
   
     @include tablet {
       display: flex;
@@ -68,6 +80,15 @@ body {
           padding-top: 2rem;
         }
       }
+      // .active-link {
+      //   &:hover {
+      //     padding: 0;
+      //     padding-top: 2rem;
+      //     padding-bottom: 1.3rem;
+      //     border-bottom: 0.125rem solid $primary-color-white;
+      //   }
+  
+      // }
     }
     @include desktop {
       display: flex;
