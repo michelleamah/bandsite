@@ -218,7 +218,7 @@ body {
 }
 .shows__item {
   padding: 1rem;
-  border-bottom: 1px solid #AFAFAF;
+  border-bottom: 0.03rem solid #AFAFAF;
   padding-right: 1rem;
 }
 .shows__item__label {
