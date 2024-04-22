@@ -106,8 +106,9 @@
     @include desktop {
       display: flex;
       justify-content: flex-start;
-      padding-left: 5rem;
-      padding-top: 2rem;
+      padding-left: 3rem;
+      padding-right: 1rem;
+
       &__text {
       width: 14rem;
     }
@@ -119,6 +120,7 @@
   @include desktop {
     display: flex;
     flex-direction: row;
+    margin-left: 3rem;
   }
 }
 

@@ -278,8 +278,8 @@ body {
   .shows__item {
     display: flex;
     justify-content: flex-start;
-    padding-left: 5rem;
-    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 1rem;
   }
   .shows__item__text {
     width: 14rem;
@@ -290,6 +290,7 @@ body {
   .shows-container {
     display: flex;
     flex-direction: row;
+    margin-left: 3rem;
   }
 }
 
