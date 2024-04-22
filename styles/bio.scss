@@ -157,7 +157,7 @@
     font-family: "avenir-demi";
     color: $primary-color-silver;
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     padding-bottom: 2rem;
     &--avatar {
       border-radius: 3rem;
@@ -182,7 +182,6 @@
     padding-left: 18rem;
     padding-right: 18rem;
   }
-  
 }
 
 .commentForm {
@@ -190,7 +189,7 @@
   padding-top: 1rem;
   width: 100%;
   label {
-    font-family: 'avenir-demi';
+    font-family: "avenir-demi";
     font-size: 0.8rem;
     color: $primary-color-silver;
     margin-bottom: 0.5rem;
@@ -208,6 +207,11 @@
     padding: 0.5rem;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  input[type="text"].error,
+  textarea.error {
+    border-color: #d22d2d;
   }
 
   button {
@@ -265,4 +269,15 @@
   margin: 0;
   padding-bottom: 3rem;
   border-bottom: 0.03rem solid $secondary-color-mercury;
+}
+
+
+.shows {
+  @include desktop {
+  font-size: 2rem; // Example size
+  font-weight: bold; // Example style
+  margin-right: 2rem; // Example margin to separate from shows
+  display: flex;
+  flex-wrap: wrap;
+  }
 }

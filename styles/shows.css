@@ -216,16 +216,6 @@ body {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-@media screen and (min-width: 1280px) {
-  .shows {
-    display: flex;
-  }
-}
-
-.shows__list {
-  display: flex;
-}
-
 .shows__item {
   padding: 1rem;
   border-bottom: 1px solid #AFAFAF;
@@ -253,6 +243,9 @@ body {
   background-color: #FAFAFA;
 }
 .shows__item__text {
+  color: #323232;
+  font-family: "avenir-regular";
+  font-size: 1rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -277,33 +270,32 @@ body {
   }
   .shows__item__text {
     flex-direction: row;
-    width: 11rem;
+    width: 10rem;
     padding-bottom: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__item {
     display: flex;
-    flex-direction: row;
-  }
-  .shows__item__label {
-    margin-right: 1rem;
-  }
-  .shows__item__button {
-    width: auto;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: 2rem;
-  }
-  .shows__item__labels-container {
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
-    padding-left: 3rem;
+    justify-content: flex-start;
+    padding-left: 5rem;
+    padding-top: 2rem;
   }
   .shows__item__text {
+    width: 14rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .shows-container {
+    display: flex;
     flex-direction: row;
-    width: 11rem;
-    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .shows-list {
+    margin-left: 5rem;
+    padding-top: 2rem;
   }
 }/*# sourceMappingURL=shows.css.map */

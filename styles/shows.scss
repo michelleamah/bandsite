@@ -37,101 +37,94 @@
 .shows {
   padding-left: 1rem;
   font-size: 2rem;
-  font-family: 'avenir-demi';
+  font-family: "avenir-demi";
   margin-left: 1rem;
   margin-right: 1rem;
 
-  @include desktop {
-    display: flex;
-  }
-}
-
-.shows__list {
-  display: flex;
-}
-
-.shows__item {
-  padding: 1rem;
-  border-bottom: 1px solid $primary-color-silver;
-  padding-right: 1rem;
-
-  &__label {
-    color: $primary-color-silver;
-    font-family: 'avenir-demi';
-    font-size: 0.8rem;
-  }
-
-  &__button {
-    font-family: 'avenir-demi';
-    font-size: 1rem;
-    background-color: $primary-color-black;
-    color: $primary-color-white;
-    border: none;
-    border-radius: 0.3rem;
+  &__item {
     padding: 1rem;
-    width: 100%;
-  }
+    border-bottom: 1px solid $primary-color-silver;
+    padding-right: 1rem;
 
-  &--selected {
-    background-color: $secondary-color-mercury;
-  }
-
-  &:hover {
-    background-color: $secondary-color-alabaster;
-  }
-
-  &__text {
-    padding-bottom: 1rem;
-  }
-
-  @include tablet {
-    display: flex;
-    flex-direction: row; 
     &__label {
-      margin-right: 1rem; 
+      color: $primary-color-silver;
+      font-family: "avenir-demi";
+      font-size: 0.8rem;
     }
 
     &__button {
-      width: auto;
-      margin-top: auto;
-      margin-left: auto;
-      margin-right: 2rem;
+      font-family: "avenir-demi";
+      font-size: 1rem;
+      background-color: $primary-color-black;
+      color: $primary-color-white;
+      border: none;
+      border-radius: 0.3rem;
+      padding: 1rem;
+      width: 100%;
     }
-    &__labels-container {
-      display: flex;
-      flex-direction: row;
-      align-self: flex-end;
-      padding-left: 3rem;
+
+    &--selected {
+      background-color: $secondary-color-mercury;
     }
+
+    &:hover {
+      background-color: $secondary-color-alabaster;
+    }
+
     &__text {
-      flex-direction: row;
-      width: 11rem;
+      color: $primary-color-black;
+      font-family: "avenir-regular";
+      font-size: 1rem;
       padding-bottom: 1rem;
     }
-  }
 
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      &__label {
+        margin-right: 1rem;
+      }
+
+      &__button {
+        width: auto;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: 2rem;
+      }
+      &__labels-container {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        padding-left: 3rem;
+      }
+      &__text {
+        flex-direction: row;
+        width: 10rem;
+        padding-bottom: 1rem;
+      }
+    }
+    @include desktop {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 5rem;
+      padding-top: 2rem;
+      &__text {
+      width: 14rem;
+    }
+  }
+}
+}
+
+.shows-container {
   @include desktop {
     display: flex;
-    flex-direction: row; 
-    &__label {
-      margin-right: 1rem; 
-    }
-    &__button {
-      width: auto;
-      margin-top: auto;
-      margin-left: auto;
-      margin-right: 2rem;
-    }
-    &__labels-container {
-      display: flex;
-      flex-direction: row;
-      align-self: flex-end;
-      padding-left: 3rem;
-    }
-    &__text {
-      flex-direction: row;
-      width: 11rem;
-      padding-bottom: 1rem;
-    }
+    flex-direction: row;
+  }
+}
+
+.shows-list {
+  @include desktop {
+    margin-left: 5rem;
+    padding-top: 2rem;
   }
 }

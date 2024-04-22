@@ -386,6 +386,10 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+.commentForm input[type=text].error,
+.commentForm textarea.error {
+  border-color: #d22d2d;
+}
 .commentForm button {
   width: 100%;
   padding: 1rem;
@@ -440,4 +444,14 @@ body {
   margin: 0;
   padding-bottom: 3rem;
   border-bottom: 0.03rem solid #E1E1E1;
+}
+
+@media screen and (min-width: 1280px) {
+  .shows {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=bio.css.map */

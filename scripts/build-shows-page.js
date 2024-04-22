@@ -31,6 +31,19 @@ const shows = [
   },
 ];
 
+function createLabelElement(labelText, labelTextContent) {
+  const labelElement = document.createElement("div");
+  labelElement.textContent = labelText;
+  labelElement.classList.add("shows__item__label");
+
+  const contentElement = document.createElement("div");
+  contentElement.textContent = labelTextContent;
+  contentElement.classList.add("shows__item__text");
+
+  labelElement.appendChild(contentElement);
+  return labelElement;
+}
+
 function createShowElement(showObj) {
   const showElement = document.createElement("div");
   showElement.classList.add("shows__item");
@@ -38,35 +51,11 @@ function createShowElement(showObj) {
   const labelsContainer = document.createElement("div");
   labelsContainer.classList.add("shows__item__labels-container");
 
-  const dateLabel = document.createElement("div");
-  dateLabel.textContent = "DATE";
-  dateLabel.classList.add("shows__item__label");
-  labelsContainer.appendChild(dateLabel);
+  labelsContainer.appendChild(createLabelElement("DATE", showObj.date));
 
-  const date = document.createElement("div");
-  date.textContent = showObj.date;
-  date.classList.add("shows__item__text");
-  labelsContainer.appendChild(date);
+  labelsContainer.appendChild(createLabelElement("VENUE", showObj.venue));
 
-  const venueLabel = document.createElement("div");
-  venueLabel.textContent = "VENUE";
-  venueLabel.classList.add("shows__item__label");
-  labelsContainer.appendChild(venueLabel);
-
-  const venue = document.createElement("div");
-  venue.textContent = showObj.venue;
-  venue.classList.add("shows__item__text");
-  labelsContainer.appendChild(venue);
-
-  const locationLabel = document.createElement("div");
-  locationLabel.textContent = "LOCATION";
-  locationLabel.classList.add("shows__item__label");
-  labelsContainer.appendChild(locationLabel);
-
-  const location = document.createElement("div");
-  location.textContent = showObj.location;
-  location.classList.add("shows__item__text");
-  labelsContainer.appendChild(location);
+  labelsContainer.appendChild(createLabelElement("LOCATION", showObj.location));
 
   const button = document.createElement("button");
   button.textContent = "BUY TICKETS";
@@ -99,11 +88,16 @@ function displayShows() {
 
   showTitle(showsContainer);
 
+  
+  const showsList = document.createElement("div");
+  showsList.classList.add("shows-list");
+
   shows.forEach((show) => {
     const showElement = createShowElement(show);
-    showsContainer.appendChild(showElement);
+    showsList.appendChild(showElement);
   });
 
+  showsContainer.appendChild(showsList); 
   const footer = document.querySelector(".footer");
   footer.parentNode.insertBefore(showsContainer, footer);
 }

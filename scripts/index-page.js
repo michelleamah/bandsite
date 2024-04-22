@@ -70,6 +70,18 @@ function submitComment(event) {
   const name = document.getElementById('name').value;
   const commentText = document.getElementById('commentText').value;
 
+  if (!name.trim()) {
+    document.getElementById('name').classList.add('error');
+    }
+
+  if (!commentText.trim()) {
+    document.getElementById('commentText').classList.add('error');
+  }
+
+  if (!commentText.trim() || !name.trim()) {
+    return
+  }
+
   const newComment = {
     name: name,
     date: new Date().toLocaleDateString(),
