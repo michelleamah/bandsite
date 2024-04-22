@@ -50,6 +50,10 @@ body {
   padding-left: 21vw;
   border-bottom: 0.125rem solid #FFFFFF;
 }
+.nav-bar .active-link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 @media screen and (min-width: 768px) {
   .nav-bar {
     display: flex;
@@ -312,18 +316,27 @@ body {
   }
 }
 
-.comments {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.comments__title {
+.comments-title {
   font-size: 2.5rem;
   font-family: "avenir-demi";
+  padding-left: 2rem;
+}
+@media screen and (min-width: 1280px) {
+  .comments-title {
+    padding-left: 6rem;
+  }
+}
+
+.comments {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 .comments__form {
   font-family: "avenir-demi";
   color: #AFAFAF;
   display: flex;
+  align-items: flex-start;
+  padding-bottom: 2rem;
 }
 .comments__form--avatar {
   border-radius: 3rem;
@@ -332,33 +345,103 @@ body {
   margin-right: 1rem;
   margin-top: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .comments {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .comments__form--avatar {
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments {
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+}
 
 .commentForm {
-  margin-top: 2rem;
+  padding: 0;
+  padding-top: 1rem;
   width: 100%;
 }
-.commentForm input, .commentForm textarea {
+.commentForm label {
+  font-family: "avenir-demi";
+  font-size: 0.8rem;
+  color: #AFAFAF;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.commentForm input[type=text],
+.commentForm textarea {
   font-family: "avenir-regular";
-  width: 100%;
   margin-bottom: 1rem;
-  border-color: #AFAFAF;
+  border: solid #E1E1E1;
   border-width: 0.15rem;
   border-radius: 0.2rem;
   background-color: #FAFAFA;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.commentForm input[type=text].error,
+.commentForm textarea.error {
+  border-color: #d22d2d;
 }
 .commentForm button {
   width: 100%;
   padding: 1rem;
+  margin-top: 1rem;
   border-radius: 0.5rem;
   background-color: #323232;
   color: #FFFFFF;
   font-family: "avenir-demi";
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: none;
 }
-.commentForm button:hover {
-  background-color: #AFAFAF;
+@media screen and (min-width: 768px) {
+  .commentForm {
+    width: 100%;
+  }
+  .commentForm button {
+    width: 35%;
+    margin-left: auto;
+  }
+}
+
+.avatar {
+  background-color: #E1E1E1;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.commentContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 2rem;
+  border-top: 0.03rem solid #E1E1E1;
+}
+
+.commentName {
+  font-size: 1.2rem;
+  font-family: "avenir-demi";
+}
+
+.commentDate {
+  margin-left: auto;
+  color: #AFAFAF;
+}
+
+.commentArea {
+  padding-left: 4rem;
+  margin: 0;
+  padding-bottom: 3rem;
+  border-bottom: 0.03rem solid #E1E1E1;
 }/*# sourceMappingURL=bio.css.map */
