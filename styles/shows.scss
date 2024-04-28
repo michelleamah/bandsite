@@ -37,7 +37,6 @@
 .shows {
   padding-left: 1rem;
   font-size: 2rem;
-  font-family: "avenir-demi";
   margin-left: 1rem;
   margin-right: 1rem;
 
@@ -45,10 +44,9 @@
     padding: 1rem;
     border-bottom: 0.03rem solid $primary-color-silver;
     padding-right: 1rem;
-
+  
     &__label {
       color: $primary-color-silver;
-      font-family: "avenir-demi";
       font-size: 0.8rem;
     }
 
@@ -73,9 +71,13 @@
 
     &__text {
       color: $primary-color-black;
-      font-family: "avenir-regular";
       font-size: 1rem;
+      font-family: "avenir-regular";
       padding-bottom: 1rem;
+    }
+
+    &__date {
+      font-family: "avenir-demi";
     }
 
     @include tablet {

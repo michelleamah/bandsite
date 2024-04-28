@@ -1,6 +1,6 @@
 import BandSiteApi from './band-site-api.js';
 
-const apiKey = 'comments';
+const apiKey = 'commentspage';
 const bandSiteApi = new BandSiteApi(apiKey);
 
 function displayComment(comment) {
@@ -22,7 +22,8 @@ function displayComment(comment) {
   commentContent.appendChild(nameElement);
 
   const dateElement = document.createElement("p");
-  dateElement.textContent = comment.date;
+  const date = new Date(comment.timestamp);
+  dateElement.textContent = date.toLocaleDateString();
   dateElement.classList.add("commentDate");
   commentContent.appendChild(dateElement);
 
@@ -46,13 +47,10 @@ async function renderComments() {
     const commentsData = await bandSiteApi.getComments();
 
     clearComments();
-    commentsData.reverse(); 
 
     commentsData.forEach(comment => {
       displayComment(comment);
     });
-
-    commentsData.reverse(); 
   } catch (error) {
     console.error('Error rendering comments:', error);
   }
@@ -61,32 +59,37 @@ async function renderComments() {
 async function submitComment(event) {
   event.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const commentText = document.getElementById('commentText').value;
+  const nameInput = document.getElementById('name');
+  const commentTextInput = document.getElementById('commentText');
+  
+  const name = nameInput.value.trim();
+  const commentText = commentTextInput.value.trim();
 
-  if (!name.trim()) {
-    document.getElementById('name').classList.add('error');
-  }
-
-  if (!commentText.trim()) {
-    document.getElementById('commentText').classList.add('error');
-  }
-
-  if (!commentText.trim() || !name.trim()) {
+  if (!name) {
+    nameInput.classList.add('error');
     return;
+  } else {
+    nameInput.classList.remove('error');
+  }
+
+  if (!commentText) {
+    commentTextInput.classList.add('error');
+    return;
+  } else {
+    commentTextInput.classList.remove('error');
   }
 
   try {
     const newComment = {
       name: name,
-      date: new Date().toLocaleDateString(),
-      comment: commentText
+      comment: commentText,
+      timestamp: new Date().toISOString() 
     };
 
     await bandSiteApi.postComment(newComment);
 
-    document.getElementById('name').value = '';
-    document.getElementById('commentText').value = '';
+    nameInput.value = '';
+    commentTextInput.value = '';
 
     await renderComments();
   } catch (error) {

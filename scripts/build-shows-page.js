@@ -1,6 +1,6 @@
 import BandSiteApi from './band-site-api.js';
 
-const apiKey = 'showdates';
+const apiKey = 'showspage';
 const bandSiteApi = new BandSiteApi(apiKey);
 
 function createLabelElement(labelText, labelTextContent) {
@@ -9,7 +9,19 @@ function createLabelElement(labelText, labelTextContent) {
   labelElement.classList.add("shows__item__label");
 
   const contentElement = document.createElement("div");
-  contentElement.textContent = labelTextContent;
+
+  if (labelTextContent && typeof labelTextContent === 'number') {
+    const date = new Date(labelTextContent);
+
+    const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options);
+
+    contentElement.textContent = formattedDate;
+    contentElement.classList.add("shows__item__date"); 
+  } else {
+    contentElement.textContent = labelTextContent;
+  }
+
   contentElement.classList.add("shows__item__text");
 
   labelElement.appendChild(contentElement);
@@ -24,7 +36,7 @@ function createShowElement(showObj) {
   labelsContainer.classList.add("shows__item__labels-container");
 
   labelsContainer.appendChild(createLabelElement("DATE", showObj.date));
-  labelsContainer.appendChild(createLabelElement("VENUE", showObj.venue));
+  labelsContainer.appendChild(createLabelElement("VENUE", showObj.place));
   labelsContainer.appendChild(createLabelElement("LOCATION", showObj.location));
 
   const button = document.createElement("button");

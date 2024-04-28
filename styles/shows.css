@@ -212,7 +212,6 @@ body {
 .shows {
   padding-left: 1rem;
   font-size: 2rem;
-  font-family: "avenir-demi";
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -223,7 +222,6 @@ body {
 }
 .shows__item__label {
   color: #AFAFAF;
-  font-family: "avenir-demi";
   font-size: 0.8rem;
 }
 .shows__item__button {
@@ -244,9 +242,12 @@ body {
 }
 .shows__item__text {
   color: #323232;
-  font-family: "avenir-regular";
   font-size: 1rem;
+  font-family: "avenir-regular";
   padding-bottom: 1rem;
+}
+.shows__item__date {
+  font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
   .shows__item {
