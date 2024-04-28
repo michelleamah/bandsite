@@ -1,35 +1,7 @@
-const shows = [
-  {
-    date: "Mon Sept 09 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 17 2024",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Oct 12 2024",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 16 2024",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 29 2024",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 18 2024",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+import BandSiteApi from './band-site-api.js';
+
+const apiKey = 'showdates';
+const bandSiteApi = new BandSiteApi(apiKey);
 
 function createLabelElement(labelText, labelTextContent) {
   const labelElement = document.createElement("div");
@@ -52,9 +24,7 @@ function createShowElement(showObj) {
   labelsContainer.classList.add("shows__item__labels-container");
 
   labelsContainer.appendChild(createLabelElement("DATE", showObj.date));
-
   labelsContainer.appendChild(createLabelElement("VENUE", showObj.venue));
-
   labelsContainer.appendChild(createLabelElement("LOCATION", showObj.location));
 
   const button = document.createElement("button");
@@ -82,24 +52,29 @@ function showTitle(container) {
   container.appendChild(title);
 }
 
-function displayShows() {
-  const showsContainer = document.createElement("div");
-  showsContainer.classList.add("shows-container");
+async function displayShows() {
+  try {
+    const showsData = await bandSiteApi.getShows();
 
-  showTitle(showsContainer);
+    const showsContainer = document.createElement("div");
+    showsContainer.classList.add("shows-container");
 
-  
-  const showsList = document.createElement("div");
-  showsList.classList.add("shows-list");
+    showTitle(showsContainer);
 
-  shows.forEach((show) => {
-    const showElement = createShowElement(show);
-    showsList.appendChild(showElement);
-  });
+    const showsList = document.createElement("div");
+    showsList.classList.add("shows-list");
 
-  showsContainer.appendChild(showsList); 
-  const footer = document.querySelector(".footer");
-  footer.parentNode.insertBefore(showsContainer, footer);
+    showsData.forEach((show) => {
+      const showElement = createShowElement(show);
+      showsList.appendChild(showElement);
+    });
+
+    showsContainer.appendChild(showsList);
+    const footer = document.querySelector(".footer");
+    footer.parentNode.insertBefore(showsContainer, footer);
+  } catch (error) {
+    console.error('Error displaying shows:', error);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", displayShows);

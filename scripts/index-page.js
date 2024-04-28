@@ -1,23 +1,7 @@
-const comments = [
-  {
-    name: "Isaac Tadesse",
-    date: "10/20/2023",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-  {
-    name: "Christina Cabrera",
-    date: "10/28/2023",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Victor Pinto",
-    date: "11/02/2023",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  }
-];
+import BandSiteApi from './band-site-api.js';
+
+const apiKey = 'comments';
+const bandSiteApi = new BandSiteApi(apiKey);
 
 function displayComment(comment) {
   const commentBox = document.querySelector(".commentBox");
@@ -57,14 +41,24 @@ function clearComments() {
   commentBox.innerHTML = "";
 }
 
-function renderComments() {
-  clearComments();
-  comments.forEach(comment => {
-    displayComment(comment);
-  });
+async function renderComments() {
+  try {
+    const commentsData = await bandSiteApi.getComments();
+
+    clearComments();
+    commentsData.reverse(); 
+
+    commentsData.forEach(comment => {
+      displayComment(comment);
+    });
+
+    commentsData.reverse(); 
+  } catch (error) {
+    console.error('Error rendering comments:', error);
+  }
 }
 
-function submitComment(event) {
+async function submitComment(event) {
   event.preventDefault();
 
   const name = document.getElementById('name').value;
@@ -72,41 +66,35 @@ function submitComment(event) {
 
   if (!name.trim()) {
     document.getElementById('name').classList.add('error');
-    }
+  }
 
   if (!commentText.trim()) {
     document.getElementById('commentText').classList.add('error');
   }
 
   if (!commentText.trim() || !name.trim()) {
-    return
+    return;
   }
 
-  const newComment = {
-    name: name,
-    date: new Date().toLocaleDateString(),
-    comment: commentText
-  };
+  try {
+    const newComment = {
+      name: name,
+      date: new Date().toLocaleDateString(),
+      comment: commentText
+    };
 
-  comments.push(newComment);
+    await bandSiteApi.postComment(newComment);
 
-  document.getElementById('name').value = '';
-  document.getElementById('commentText').value = '';
+    document.getElementById('name').value = '';
+    document.getElementById('commentText').value = '';
 
-  renderComments();
+    await renderComments();
+  } catch (error) {
+    console.error('Error submitting comment:', error);
+  }
 }
 
 const form = document.querySelector('.commentForm');
 form.addEventListener('submit', submitComment);
 
-renderComments();
-
-function renderComments() {
-  clearComments();
-  comments.reverse(); 
-
-  for (let i = 0; i < comments.length; i++) {
-    displayComment(comments[i]);
-  }
-  comments.reverse();
-}
+document.addEventListener("DOMContentLoaded", renderComments);
