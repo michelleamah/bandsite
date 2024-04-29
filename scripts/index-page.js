@@ -109,22 +109,12 @@ async function submitComment(event) {
       comment: commentText
     };
 
-    const jsonData = JSON.stringify(newComment);
-
-    const config = {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    };
-
-    await bandSiteApi.postComment(jsonData, config);
+    await bandSiteApi.postComment(newComment);
 
     nameInput.value = '';
     commentTextInput.value = '';
 
-    const commentBox = document.querySelector(".commentBox");
-    const commentElement = createCommentElement(newComment);
-    commentBox.prepend(commentElement);
+    await renderComments();
 
   } catch (error) {
     console.error('Error submitting comment:', error);
