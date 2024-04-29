@@ -223,6 +223,7 @@ body {
 .shows__item__label {
   color: #AFAFAF;
   font-size: 0.8rem;
+  font-family: "avenir-demi";
 }
 .shows__item__button {
   font-family: "avenir-demi";
