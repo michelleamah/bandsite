@@ -50,7 +50,7 @@
     font-family: "avenir-regular";
     padding-bottom: 2rem;
   }
-  &__content--subtitle {
+  &__content-subtitle {
     font-size: 1.5rem;
   }
 
@@ -268,5 +268,31 @@
   padding-left: 4rem;
   margin: 0;
   padding-bottom: 2rem;
-  border-bottom: 0.03rem solid $secondary-color-mercury;
+}
+
+.like-button {
+  background-image: url('../assets/icons/SVG/icon-like.svg');
+  background-repeat: no-repeat;
+  background-size: contain; 
+  padding-left: 1.5rem;
+  background-color: $primary-color-white;
+  border: none;
+  font-family: 'avenir-regular';
+}
+
+.delete-button {
+  background-image: url('../assets/icons/SVG/icon-delete.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 1.5rem;
+  background-color: $primary-color-white;
+  font-family: 'avenir-regular';
+  border: none;
+}
+
+.buttonContainer {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: end;
+  padding-left: 1rem;
 }

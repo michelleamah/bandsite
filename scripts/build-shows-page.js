@@ -1,7 +1,6 @@
 import BandSiteApi from './band-site-api.js';
 
-const apiKey = 'showspage';
-const bandSiteApi = new BandSiteApi(apiKey);
+const bandSiteApi = new BandSiteApi();
 
 function createLabelElement(labelText, labelTextContent) {
   const labelElement = document.createElement("div");
@@ -25,6 +24,7 @@ function createLabelElement(labelText, labelTextContent) {
   contentElement.classList.add("shows__item__text");
 
   labelElement.appendChild(contentElement);
+
   return labelElement;
 }
 
@@ -76,8 +76,11 @@ async function displayShows() {
     const showsList = document.createElement("div");
     showsList.classList.add("shows-list");
 
-    showsData.forEach((show) => {
+    showsData.forEach((show, index) => {
       const showElement = createShowElement(show);
+      if (index === 0) {
+        showElement.classList.add("shows__item--first");
+      }
       showsList.appendChild(showElement);
     });
 

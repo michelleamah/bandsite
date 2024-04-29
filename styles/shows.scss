@@ -48,6 +48,7 @@
     &__label {
       color: $primary-color-silver;
       font-size: 0.8rem;
+
     }
 
     &__button {
@@ -83,6 +84,7 @@
     @include tablet {
       display: flex;
       flex-direction: row;
+
       &__label {
         margin-right: 1rem;
       }
@@ -105,6 +107,7 @@
         padding-bottom: 1rem;
       }
     }
+
     @include desktop {
       display: flex;
       justify-content: flex-start;

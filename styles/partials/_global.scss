@@ -45,13 +45,6 @@ body {
     .active-link {
       text-decoration: none;
       color: $primary-color-white;
-      // &:hover {
-      //   padding-bottom: 1rem;
-      //   padding-right: 18vw;
-      //   padding-left: 21vw;
-      //   border-bottom: 0.125rem solid $primary-color-white;
-      // }
-
     }
   
     @include tablet {
@@ -80,15 +73,6 @@ body {
           padding-top: 2rem;
         }
       }
-      // .active-link {
-      //   &:hover {
-      //     padding: 0;
-      //     padding-top: 2rem;
-      //     padding-bottom: 1.3rem;
-      //     border-bottom: 0.125rem solid $primary-color-white;
-      //   }
-  
-      // }
     }
     @include desktop {
       display: flex;
@@ -112,7 +96,7 @@ body {
     padding-left: 1rem;
     font-size: 0.9rem;
     position: relative;
-    &__sns--contacts {
+    &__sns-contacts {
       font-family: "avenir-demi";
       padding-top: 2rem;
       font-size: 2rem;

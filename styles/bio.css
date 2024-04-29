@@ -103,7 +103,7 @@ body {
   font-size: 0.9rem;
   position: relative;
 }
-.footer__sns--contacts {
+.footer__sns-contacts {
   font-family: "avenir-demi";
   padding-top: 2rem;
   font-size: 2rem;
@@ -228,7 +228,7 @@ body {
   font-family: "avenir-regular";
   padding-bottom: 2rem;
 }
-.about__content--subtitle {
+.about__content-subtitle {
   font-size: 1.5rem;
 }
 @media screen and (min-width: 768px) {
@@ -443,5 +443,31 @@ body {
   padding-left: 4rem;
   margin: 0;
   padding-bottom: 2rem;
-  border-bottom: 0.03rem solid #E1E1E1;
+}
+
+.like-button {
+  background-image: url("../assets/icons/SVG/icon-like.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 1.5rem;
+  background-color: #FFFFFF;
+  border: none;
+  font-family: "avenir-regular";
+}
+
+.delete-button {
+  background-image: url("../assets/icons/SVG/icon-delete.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 1.5rem;
+  background-color: #FFFFFF;
+  font-family: "avenir-regular";
+  border: none;
+}
+
+.buttonContainer {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: end;
+  padding-left: 1rem;
 }/*# sourceMappingURL=bio.css.map */
